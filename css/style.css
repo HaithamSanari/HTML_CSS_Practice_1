@@ -1,5 +1,11 @@
 /* start of variable declaration */
-
+:root {
+  --main-color: #10cab7;
+  --secondary-color: #2c4755;
+  --section-padding: 60px;
+  --section-background: #f6f6f6;
+  --main-duration: 0.5s;
+}
 /* End of variable declaration */
 /* start of global rules */
 * {
@@ -7,10 +13,119 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Work Sans', sans-serif;
   font-size: 2rem;
-  font-weight:normal;
+  font-weight: normal;
   font-style: normal;
 }
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* small screens */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium screens */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large screens */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
 /* End of global rules */
+
+/* Start of header */
+.header {
+  padding: 20px;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container .image {
+  width: 60px;
+}
+.header .container .links {
+  position: relative;
+}
+.header .container .links:hover .icon span:nth-child(2) {
+  width: 100%;
+}
+.header .container .links .icon {
+  width: 30px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.header .container .links .icon span {
+  background-color: #333;
+  margin-bottom: 5px;
+  height: 2px;
+}
+.icon span:first-child {
+  width: 100%;
+}
+.header .links .icon span:nth-child(2) {
+  width: 60%;
+  transition: var(--main-duration);
+}
+.icon span:last-child {
+  width: 100%;
+}
+.header .container .links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #f6f6f6;
+  position: absolute;
+  right: 0;
+  min-width: 200px;
+  top: calc(100% + 15px);
+  display: none;
+  z-index: 1;
+}
+.header .container .links ul::before {
+  content: '';
+  position: absolute;
+  border-color: transparent transparent #f6f6f6 transparent;
+  border-style: solid;
+  border-width: 10px;
+  right: 5px;
+  top: -20px;
+}
+.header .container .links:hover ul {
+  display: block;
+}
+.header .container .links ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: var(--main-duration);
+}
+
+.header .container .links ul li a:hover {
+  padding-left: 25px;
+}
+
+.header .container .links ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+}
+/* End of header */
