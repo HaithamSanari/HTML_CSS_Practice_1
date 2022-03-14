@@ -49,6 +49,33 @@ body {
   }
 }
 /* End of global rules */
+/* Start Components */
+.special-heading {
+  color: #ebeced;
+  font-size: 6rem;
+  margin: 0;
+  margin-top: 50px;
+  padding: 0;
+  line-height: 0.6;
+  letter-spacing: -3px;
+  text-align: center;
+}
+.special-heading + p {
+  margin: 0;
+  font-size: 19px;
+  text-align: center;
+  margin-bottom: 100px;
+  color: #797979;
+}
+@media (max-width: 767px) {
+  .special-heading {
+    font-size: 60px;
+  }
+  .special-heading + p {
+    margin-top: -20px;
+  }
+}
+/* End Components */
 
 /* Start of header */
 .header {
@@ -154,5 +181,117 @@ body {
 .landing .intro-text p {
   font-size: 19px;
   line-height: 1.8;
+  color: black;
+  font-weight: normal;
 }
 /* End Services  */
+/* Start features */
+.features {
+  background-color: var(--section-background);
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+.features .feat h3 {
+  font-weight: 800;
+  margin: 30px 0;
+}
+.features .container .feat p {
+  line-height: 1.8;
+  color: #777;
+  font-size: 17px;
+}
+.features .container .feat i {
+  color: var(--main-color);
+}
+/* End features */
+/* Start Services */
+.Services {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.Services .container .services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 'graphic webDesign image' 'uiux development image';
+  grid-gap: 20px;
+  font-size: 16px;
+}
+.Services .container .services-content .Service-num {
+  display: flex;
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .Services .container .services-content .Service-num {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* @media (max-width: 991px) {
+  .Services .container .services-content .Service-num {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'graphic webDesign'
+      'ui-ux development';
+    text-align: center;
+    background-color: red;
+  }
+} */
+/* .Services .container .services-content .one {
+  grid-area: graphic;
+}
+.Services .container .services-content .two {
+  grid-area: webDesign;
+}
+.Services .container .services-content .three {
+  grid-area: ui-ux;
+}
+.Services .container .services-content.four {
+  grid-area: development;
+} */
+.Services .container .services-content h4 {
+  margin: 0 0 20px;
+}
+.Services .container .services-content i {
+  color: var(--main-color);
+  flex-basis: 60px;
+  padding-right: 20px;
+}
+.Services .container .services-content p {
+  color: #999a9b;
+  line-height: 1.5;
+  flex: 1;
+}
+.Services .container .services-content .image {
+  grid-area: image;
+  text-align: center;
+  position: relative;
+}
+.Services .container .services-content .image::before {
+  content: '';
+  background-color: var(--secondary-color);
+  width: 100px;
+  height: calc(100% + 50px);
+  top: -50px;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+.Services .container .services-content .image img {
+  width: 260px;
+}
+@media (max-width: 1199px) {
+  .image {
+    display: none;
+  }
+}
+/* End Services */
