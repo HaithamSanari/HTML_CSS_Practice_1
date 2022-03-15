@@ -388,18 +388,19 @@ body {
 }
 .contact .contact-content {
   text-align: center;
+  padding-bottom: var(--section-padding);
 }
 .contact .contact-content p{
   font-size: 2rem;
   color:#2C4755;
-  font-weight: bold;
+  font-weight: 800;
   margin: 0;
   padding-bottom: 15px;
 }
 .contact .contact-content a{
   font-size: 2rem;
   color:var(--main-color);
-  font-weight: bold;
+  font-weight: 800;
   text-decoration: none;
 }
 .contact .contact-content .soicail-link i{
@@ -408,3 +409,19 @@ body {
 }
 /* color: var(--secondary-color); */
 /* End Contact*/
+/* Start Footer */
+.footer {
+  background-color: var(--secondary-color);
+}
+.footer .footer-content{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color:white;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.footer .footer-content span{
+  color: var(--main-color);
+  font-weight: bold;
+}
+/* End Footer */
