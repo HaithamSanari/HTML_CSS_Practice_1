@@ -302,7 +302,7 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 30px;
   margin-top: 80px;
-  font-size: 1rem;
+  
 }
 .portfolio .portfolio-content .card {
   background-color: white;
@@ -322,3 +322,61 @@ body {
   margin-bottom: 0;
 }
 /* End Portfolio */
+/* Start About */
+.about{
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.about .about-content{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+.about .about-content .text{
+  line-height: 2;
+  margin-bottom: 50px;
+  margin-left: 120px;
+}
+.about .about-content p:first-of-type  {
+  font-weight: 550;
+  padding-bottom:50px;
+}
+.about .about-content p:last-child  {
+  /* padding-top:10px; */
+  font-weight: 100;
+}
+.about .about-content .text hr{
+  border-color: var(--main-color);
+  width: 50%;
+  display: inline-block;
+}
+.about .about-content .image{
+  position: relative;
+}
+.about .about-content .image img{
+  max-width: 70%;
+}
+.about .about-content .image::before{
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: calc(100% + 50px);
+  background-color: #EBECED;
+  z-index: -1;
+  top: -12%;
+  left: -20px;
+}
+.about .about-content .image::after{
+  content: "";
+  position: absolute;
+  height: 72%;
+  width: 25%;
+  z-index: -1;
+  border-left: 80px solid var(--main-color);
+  border-bottom: 75px solid var(--main-color);
+  top: -45px;
+  right: -20px;
+}
+/* End About */
