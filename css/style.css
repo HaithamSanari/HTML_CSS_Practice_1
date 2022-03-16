@@ -400,7 +400,7 @@ body {
 .contact .contact-content a{
   font-size: 2rem;
   color:var(--main-color);
-  font-weight: 800;
+  font-weight: 600;
   text-decoration: none;
 }
 .contact .contact-content .soicail-link i{
